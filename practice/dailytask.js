@@ -348,3 +348,86 @@ switch(producttype){
         console.log("select type");
 }
 
+
+//Bill Splitter with Promo Logic
+let total_bill_amount=1000;
+let num_of_people=9;
+let promocode ="PERCENT10";
+if(promocode==="FLAT50"){
+    total_bill_amount =total_bill_amount-50;
+}
+else if(promocode==="PERCENT10"){
+    total_bill_amount =total_bill_amount*0.90;
+}
+else{
+    console.log("no discount");
+}
+console.log(total_bill_amount);
+console.log(total_bill_amount/num_of_people);
+
+//Multi-Currency Checkout with Promo
+let amount1=700;
+let currency1="EUR";
+promocode="FLAT100";
+switch(currency1){
+    case "INR":
+        if(promocode==="FLAT100"){
+            amount1=amount1-100;
+        }
+        else{
+            amount1=amount1*0.90;
+        }
+    break;
+     case "USD":
+        if(promocode==="FLAT100"){
+            amount1=amount1-100;
+        }
+        else{
+            amount1=amount1*0.90;
+        }
+    break;
+     case "EUR":
+        if(promocode==="FLAT100"){
+            amount1=amount1-100;
+        }
+        else{
+            amount1=amount1 *0.90;
+        }
+    break;
+    default:
+        console.log("select any currency");
+}
+console.log(amount1);
+
+
+//Age Group Greeting
+let agegroup=11;
+let gender="female";
+if(agegroup<13){
+    if(gender==="male"){
+        console.log("hey young boy");
+    }else{
+        console.log("hey little girl");
+    }
+}else if(agegroup<19){
+    console.log("hello teen");
+}else{
+    console.log("welcome adult");
+}
+
+
+//Student Result and Feedback Generator
+let mark=345;
+let section="B";
+if(mark>90){
+    if(section==="A"){
+         console.log("outstanding in section A");
+    }else{
+        console.log("excellent in section B");
+    }
+}else if(mark>70){
+    console.log("good performance");
+}
+else{
+    console.log("needs improvement");
+}

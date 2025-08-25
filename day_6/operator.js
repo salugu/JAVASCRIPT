@@ -25,3 +25,10 @@ console.log()
  let s=6;
  console.log(s++ - ++s + s-- + --s);
  console.log(s);
+
+
+ let d = 5;
+while(d>=1){
+    console.log(d);
+    d--;
+}
